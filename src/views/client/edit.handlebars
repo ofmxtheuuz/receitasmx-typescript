@@ -1,0 +1,22 @@
+<div class="card mt-5">
+    <div class="card-body p-3">
+        <h1>
+            Editar receita
+        </h1>
+        <form action="/receitas/edit" method="post">
+            <input type="hidden" name="id" value="{{receita._id}}">
+            <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Titulo da receita"
+                value="{{receita.titulo}}"><br>
+            <input type="text" name="descricao" id="descricao" class="form-control" placeholder="Descrição da receita"
+                value="{{receita.descricao}}"><br>
+            <input type="text" name="autor" id="autor" class="form-control" placeholder="Autor da receita"
+                value="{{receita.autor}}"><br>
+            <textarea class="form-control" name="conteudo" id="conteudo" cols="30" rows="10"
+                placeholder="Conteudo da receita">{{receita.conteudo}}</textarea><br>
+            <button type="submit" class="btn btn-success mb-3">
+                Salvar alterações
+            </button>
+        </form>
+        <a href="/">Retornar ao início</a>
+    </div>
+</div>
