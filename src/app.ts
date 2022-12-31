@@ -35,6 +35,7 @@ app.use(parser.default());
 import client from "./routes/client";
 app.use('/', client)
 
+// get application port
 const port = config.get<number>('port')
 
 app.listen(port, async () => {
